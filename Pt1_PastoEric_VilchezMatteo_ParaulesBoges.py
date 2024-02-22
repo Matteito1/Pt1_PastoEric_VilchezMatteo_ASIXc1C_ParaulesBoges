@@ -29,3 +29,27 @@ def desordenar_palabras():
 frase()
 desordenar_palabras()
 print(texto_ord)
+
+
+
+
+
+!!!!!!!!!!!!!!
+
+
+listapalabras = []
+cEspeciales = [".", ",", "?", ":", ";", "!", "'", "¡", "¿"]
+def frase():
+    texto = input("Dime el texto a desordenar: ").split(" ")
+    listapalabras.append(texto)
+    return texto
+def desordenar_palabras():
+    for palabrades in listapalabras:
+     pLetra = palabrades[0]
+     uLetra = palabrades[-1]
+     print(pLetra)
+     print(uLetra)
+
+frase()
+desordenar_palabras()
+print(listapalabras)
