@@ -15,7 +15,7 @@
 
 import random
 cEspeciales = [".", ",", "?", ":", ";", "!", "'", "¡", "¿"]
-letras=('a','A','b','B','c','C','d','D','e','E','f','F','g','G','h','H','i','I','j','J','k','K','l','L','m','M','n','N','o','O','p','P','q','Q','r','R','s','S','t','T','u','U','v','V','w','W','x','X','y','Y','z','Z')
+#letras=('a','A','b','B','c','C','d','D','e','E','f','F','g','G','h','H','i','I','j','J','k','K','l','L','m','M','n','N','o','O','p','P','q','Q','r','R','s','S','t','T','u','U','v','V','w','W','x','X','y','Y','z','Z')
 Texto_Ordenado=[]
 palabras=[]
 frase_Desordenado=[]
@@ -29,7 +29,7 @@ def frase():
 def separar():
     for palabrades in Texto_Ordenado:
         if len(palabrades)>=3:
-            if palabrades[-1] in letras:
+            if palabrades[-1] in frase:
                 sep=list(palabrades[1:-1])
                 random.shuffle(sep)
                 separado=palabrades[0]+''.join(sep)+palabrades[-1]
