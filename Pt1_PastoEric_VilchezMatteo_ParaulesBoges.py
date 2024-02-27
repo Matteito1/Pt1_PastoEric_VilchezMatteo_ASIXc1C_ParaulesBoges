@@ -47,7 +47,7 @@ def juntar():
     return frasedes
 def resultado():
     print(frase_Desordenado)
-    print("Traducido ordenado:")
+    print("Texto ordenado:")
     print(frase)
 
 Texto_Ordenado,frase=frase()
