@@ -11,22 +11,21 @@
 #2 Separamos cada palabra de la frase para que se desordene
 #3 Desordenar la frase teniendo en cuenta que la primera y ultima letra no se mueven
 #4 Devolvemos toddo el texto desordenado
-#5 Escribimos un "quiere decir" y ahí mostrará el texto original que mandó el usuario
-
+#5 Escribimos un "Traducido ordenado" y ahí mostrará el texto original que mandó el usuario
 
 import random
 cEspeciales = [".", ",", "?", ":", ";", "!", "'", "¡", "¿"]
 letras=('a','A','b','B','c','C','d','D','e','E','f','F','g','G','h','H','i','I','j','J','k','K','l','L','m','M','n','N','o','O','p','P','q','Q','r','R','s','S','t','T','u','U','v','V','w','W','x','X','y','Y','z','Z')
 Texto_Ordenado=[]
 palabras=[]
-frasedes=[]
-def int_frase():
+frase_Desordenado=[]
+def frase():
     try:
         frase=input("Introduce el texto que quieres desordenar: ")
         frase_ordenada=frase.split()
         return frase_ordenada,frase
     except:
-        print("Error incorrecto lo que has introducido")
+        print("Error - Lo que has introducido es incorrecto")
 def separar():
     for palabrades in Texto_Ordenado:
         if len(palabrades)>=3:
@@ -42,14 +41,16 @@ def separar():
             separado=palabrades
         palabras.append(separado)
     return palabras
+
 def juntar():
     frasedes=' '.join(palabras)
     return frasedes
 def resultado():
-    print(frasedes)
-    print("Traducido:")
+    print(frase_Desordenado)
+    print("Traducido ordenado:")
     print(frase)
-Texto_Ordenado,frase=int_frase()
+
+Texto_Ordenado,frase=frase()
 palabras=separar()
-frasedes=juntar()
+frase_Desordenado=juntar()
 resultado()
